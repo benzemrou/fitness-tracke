@@ -1,5 +1,3 @@
-// src/pages/Workout.jsx
-
 function Workout() {
   return (
     <div className="p-8">
@@ -9,4 +7,4 @@ function Workout() {
   );
 }
 
-export default Workout; // <--- Hada huwa l-s-taer li khassek!
+export default Workout; 

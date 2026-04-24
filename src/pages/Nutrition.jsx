@@ -1,5 +1,3 @@
-// src/pages/Nutrition.jsx
-
 function Nutrition() {
   return (
     <div className="p-8">
@@ -9,4 +7,4 @@ function Nutrition() {
   );
 }
 
-export default Nutrition; // <--- T-akked mn had l-ster darouri!
+export default Nutrition;
