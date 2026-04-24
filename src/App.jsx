@@ -1,19 +1,23 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Dashboard from './pages/Dashboard';
+import Nutrition from './pages/Nutrition';
+import Workouts from './pages/Workout';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
-      <header className="bg-blue-600 p-4 text-white text-center shadow-lg">
-        <h1 className="text-2xl font-bold">Fitness & Nutrition Tracker</h1>
-      </header>
-      
-      <main className="p-6 max-w-4xl mx-auto">
-        {/* Hna ghadi i-kounou l-Components dyalna men be3d */}
-        <div className="bg-white p-8 rounded-xl shadow-md text-center">
-          <p className="text-lg">hello</p>
-        </div>
-      </main>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-100">
+        <Navbar />
+        <main className="container mx-auto p-6">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/nutrition" element={<Nutrition />} />
+            <Route path="/workout" element={<Workouts />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
